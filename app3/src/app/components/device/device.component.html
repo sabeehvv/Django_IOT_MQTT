@@ -1,0 +1,30 @@
+<!-- <div class="device">
+    <h2>Device Data</h2>
+    <div class="data">
+      <p>Data Value: {{ deviceData }}</p> -->
+      <!-- <p>Status: {{ device1Data.status }}</p> -->
+      <!-- Add more data fields as needed -->
+    <!-- </div>
+  </div> -->
+
+
+
+
+  <div class="device">
+    <h2>Device Data</h2>
+    <div class="data">
+
+      <p>Status: {{ deviceData.event }}</p>
+      <p>Device ID: {{ deviceData.device_id }}</p>
+      
+      <!-- Check if 'value' is present before displaying it -->
+      <ng-container *ngIf="deviceData.value !== undefined">
+        <p>Data Value: {{ deviceData.value }}</p>
+      </ng-container>
+      
+      <!-- Uncomment the following line if status information is available -->
+      <!-- <p>Status: {{ deviceData.status }}</p> -->
+      
+      <!-- Add more data fields as needed -->
+    </div>
+  </div>
